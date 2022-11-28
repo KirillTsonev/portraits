@@ -4,7 +4,7 @@ const showMoreStyles = (trigger, wrapper) => {
     const btn = document.querySelector(trigger);
 
     btn.addEventListener("click", function() {
-        getResource("http://localhost:3000/styles")
+        getResource("https://6348588d0b382d796c6fde8e.mockapi.io/style_cards")
             .then(res => createCards(res))
             .catch();
 
@@ -23,7 +23,7 @@ const showMoreStyles = (trigger, wrapper) => {
         
                 <h4>${a.title}</h4>
         
-                <a href=${a.link}>Подробнее</a>
+                <a href=${a.link}>More details</a>
             </div>
             `;
 

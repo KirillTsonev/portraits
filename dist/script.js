@@ -841,7 +841,7 @@ __webpack_require__.r(__webpack_exports__);
 const showMoreStyles = (trigger, wrapper) => {
   const btn = document.querySelector(trigger);
   btn.addEventListener("click", function () {
-    Object(_services_requests__WEBPACK_IMPORTED_MODULE_0__["getResource"])("http://localhost:3000/styles").then(res => createCards(res)).catch();
+    Object(_services_requests__WEBPACK_IMPORTED_MODULE_0__["getResource"])("https://6348588d0b382d796c6fde8e.mockapi.io/style_cards").then(res => createCards(res)).catch();
     this.remove();
   });
 
@@ -855,7 +855,7 @@ const showMoreStyles = (trigger, wrapper) => {
         
                 <h4>${a.title}</h4>
         
-                <a href=${a.link}>Подробнее</a>
+                <a href=${a.link}>More details</a>
             </div>
             `;
       document.querySelector(wrapper).appendChild(card);
