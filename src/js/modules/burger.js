@@ -5,7 +5,7 @@ const burger = (menu, burger) => {
     menuElement.style.display = "none";
 
     burgerElement.addEventListener("click", () => {
-        if (menuElement.style.display === "none" && window.screen.availWidth < 993) {
+        if (menuElement.style.display === "none") {
             menuElement.style.display = "block";
         } else {
             menuElement.style.display = "none";
