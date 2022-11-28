@@ -841,9 +841,13 @@ __webpack_require__.r(__webpack_exports__);
 const showMoreStyles = (trigger, wrapper) => {
   const btn = document.querySelector(trigger);
   btn.addEventListener("click", function () {
-    Object(_services_requests__WEBPACK_IMPORTED_MODULE_0__["getResource"])("https://6348588d0b382d796c6fde8e.mockapi.io/style_cards").then(res => createCards(res)).catch();
+    Object(_services_requests__WEBPACK_IMPORTED_MODULE_0__["getResource"])("https://6348588d0b382d796c6fde8e.mockapi.io/style_cards").then(expandSection()).then(res => createCards(res)).catch();
     this.remove();
   });
+
+  function expandSection() {
+    document.querySelector(".styles").style.height = "1100px";
+  }
 
   function createCards(response) {
     response.forEach(a => {

@@ -5,11 +5,16 @@ const showMoreStyles = (trigger, wrapper) => {
 
     btn.addEventListener("click", function() {
         getResource("https://6348588d0b382d796c6fde8e.mockapi.io/style_cards")
+            .then(expandSection())
             .then(res => createCards(res))
             .catch();
 
         this.remove();
     });
+
+    function expandSection () {
+        document.querySelector(".styles").style.height = "1100px"
+    }
 
     function createCards(response) {
         response.forEach(a => {
